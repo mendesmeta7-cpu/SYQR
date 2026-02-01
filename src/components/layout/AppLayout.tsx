@@ -11,10 +11,11 @@ export const AppLayout: React.FC<{ children: React.ReactNode }> = ({ children })
 
             {/* Header */}
             <header className="z-10 flex flex-col items-center gap-2 mb-4 animate-fade-in">
-                <div className="w-16 h-16 rounded-full bg-gradient-to-tr from-[var(--tech-cyan)] to-[var(--tech-blue)] flex items-center justify-center shadow-[var(--shadow-neon)]">
-                    {/* Fallback S-Logo if image fails or for cleaner look */}
-                    <span className="text-3xl font-bold text-white font-mono">S</span>
-                </div>
+                <img
+                    src="/logo.png"
+                    alt="Synapta Logo"
+                    className="w-16 h-16 object-contain"
+                />
                 <h1 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[var(--tech-cyan)] to-[var(--tech-blue)] drop-shadow-lg">
                     Synapta QR
                 </h1>
