@@ -11,10 +11,12 @@ export const AppLayout: React.FC<{ children: React.ReactNode }> = ({ children })
 
             {/* Header */}
             <header className="z-10 flex flex-col items-center gap-2 mb-4 animate-fade-in">
-                <img
-                    src={`${import.meta.env.BASE_URL}logo.png`}
-                    alt="Synapta Logo"
-                    className="nav-logo"
+                <div 
+                    className="nav-logo" 
+                    style={{ 
+                        WebkitMaskImage: `url(${import.meta.env.BASE_URL}logo.png)`,
+                        maskImage: `url(${import.meta.env.BASE_URL}logo.png)` 
+                    }} 
                 />
                 <h1 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[var(--tech-cyan)] to-[var(--tech-blue)] drop-shadow-lg">
                     Synapta QR

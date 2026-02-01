@@ -142,12 +142,17 @@ select {
   }
 }
 
-/* Specific Logo Fix */
+/* Specific Logo Fix using CSS Masking */
 .nav-logo {
-  width: 48px !important;
-  height: 48px !important;
-  object-fit: contain;
-  mix-blend-mode: screen;
+  width: 48px;
+  height: 48px;
+  background-color: white;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
   display: block;
 }
 
