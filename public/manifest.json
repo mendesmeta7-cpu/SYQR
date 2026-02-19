@@ -1,6 +1,6 @@
 {
-  "short_name": "SynaptaQR",
-  "name": "Générateur Synapta QR",
+  "short_name": "SYQR",
+  "name": "Générateur SYQR",
   "icons": [
     {
       "src": "logo.png",

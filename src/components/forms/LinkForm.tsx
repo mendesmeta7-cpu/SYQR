@@ -23,7 +23,7 @@ export const LinkForm: React.FC<LinkFormProps> = ({ value, onChange }) => {
             <h2 className="text-xl font-semibold mb-2 text-gradient">Lien URL</h2>
             <Input
                 label="Adresse Web (URL)"
-                placeholder="https://synapta.com"
+                placeholder="https://exemple.com"
                 value={value}
                 onChange={(e) => onChange(e.target.value)}
                 error={error}

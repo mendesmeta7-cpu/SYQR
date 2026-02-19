@@ -46,7 +46,7 @@ export const QRCodeDisplay: React.FC<QRCodeDisplayProps> = ({ data, logo }) => {
     }, [data, logo, update]);
 
     const handleDownload = (ext: 'png' | 'svg') => {
-        download(ext, `synapta-${ext.toUpperCase()}`);
+        download(ext, `syqr-${ext.toUpperCase()}`);
     };
 
     return (
@@ -80,7 +80,7 @@ export const QRCodeDisplay: React.FC<QRCodeDisplayProps> = ({ data, logo }) => {
                 <Button
                     variant="ghost"
                     fullWidth
-                    onClick={() => navigator.share({ title: 'Synapta QR', text: 'Mon QR Code Synapta', url: window.location.href })}
+                    onClick={() => navigator.share({ title: 'SYQR', text: 'Mon QR Code SYQR', url: window.location.href })}
                     disabled={!data}
                 >
                     <Share2 size={18} className="mr-2" /> Partager

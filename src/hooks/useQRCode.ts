@@ -79,7 +79,7 @@ export const useQRCode = (initialData: string = '') => {
         }
     };
 
-    const download = (extension: FileExtension, name: string = 'synapta-qr') => {
+    const download = (extension: FileExtension, name: string = 'syqr') => {
         if (qrCode) {
             qrCode.download({
                 extension: extension,
