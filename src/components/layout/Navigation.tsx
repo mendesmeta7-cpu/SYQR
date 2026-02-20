@@ -9,30 +9,39 @@ interface NavigationProps {
 
 export const Navigation: React.FC<NavigationProps> = ({ activeTab, onTabChange }) => {
     return (
-        <div className="flex bg-navy p-1 rounded-xl mb-6 relative">
+        <div className="flex nav-container p-1.5 mb-8 relative border border-white/5 backdrop-blur-xl w-fit mx-auto min-w-[300px]">
             <div
                 className={clsx(
-                    "absolute top-1 bottom-1 w-1/2 bg-white/10 rounded-lg transition-transform duration-300 ease-in-out",
-                    activeTab === 'link' ? 'translate-x-[100%]' : 'translate-x-0'
+                    "absolute nav-pill transition-all duration-500 ease-[cubic-bezier(0.19,1,0.22,1)]",
+                    activeTab === 'link' ? 'translate-x-[calc(100%)]' : 'translate-x-0'
                 )}
+                style={{
+                    transform: activeTab === 'link' ? 'translateX(100%)' : 'translateX(0)'
+                }}
             />
             <button
                 className={clsx(
-                    "flex-1 flex items-center justify-center p-3 rounded-lg z-10 transition-colors",
-                    activeTab === 'wifi' ? 'text-[var(--tech-cyan)] font-bold' : 'text-[var(--tech-text-secondary)]'
+                    "flex-1 flex items-center justify-center py-3 px-8 z-10 transition-all duration-300",
+                    activeTab === 'wifi' ? 'text-white' : 'text-secondary opacity-60'
                 )}
+                style={{ borderRadius: '999px' }}
                 onClick={() => onTabChange('wifi')}
             >
-                <Wifi size={18} className="mr-2" /> Wi-Fi
+                <Wifi size={20} className={clsx("mr-3", activeTab === 'wifi' && "text-neon-cyan")}
+                    style={{ color: activeTab === 'wifi' ? 'var(--neon-cyan)' : 'inherit' }} />
+                <span className="text-sm font-semibold tracking-wide">Wi-Fi</span>
             </button>
             <button
                 className={clsx(
-                    "flex-1 flex items-center justify-center p-3 rounded-lg z-10 transition-colors",
-                    activeTab === 'link' ? 'text-[var(--tech-cyan)] font-bold' : 'text-[var(--tech-text-secondary)]'
+                    "flex-1 flex items-center justify-center py-3 px-8 z-10 transition-all duration-300",
+                    activeTab === 'link' ? 'text-white' : 'text-secondary opacity-60'
                 )}
+                style={{ borderRadius: '999px' }}
                 onClick={() => onTabChange('link')}
             >
-                <Link size={18} className="mr-2" /> Lien
+                <Link size={20} className={clsx("mr-3", activeTab === 'link' && "text-neon-cyan")}
+                    style={{ color: activeTab === 'link' ? 'var(--neon-cyan)' : 'inherit' }} />
+                <span className="text-sm font-semibold tracking-wide">Lien</span>
             </button>
         </div>
     );
