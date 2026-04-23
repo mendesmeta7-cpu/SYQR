@@ -19,8 +19,8 @@ export const LinkForm: React.FC<LinkFormProps> = ({ value, onChange }) => {
     }, [value]);
 
     return (
-        <Card className="flex flex-col gap-4">
-            <h2 className="text-xl font-semibold mb-2 text-gradient">Lien URL</h2>
+        <Card className="flex flex-col gap-6 p-8">
+            <h2 className="text-3xl font-bold mb-4 text-center tracking-tight text-white">Lien URL</h2>
             <Input
                 label="Adresse Web (URL)"
                 placeholder="https://exemple.com"

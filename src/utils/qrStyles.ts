@@ -6,9 +6,9 @@ export interface QRStyleConfig {
     type: QRStyleType;
     dotsColor: string;
     backgroundColor: string;
-    dotsType: Options['dotsOptions']['type'];
-    cornersSquareType: Options['cornersSquareOptions']['type'];
-    cornersDotType: Options['cornersDotOptions']['type'];
+    dotsType: NonNullable<Options['dotsOptions']>['type'];
+    cornersSquareType: NonNullable<Options['cornersSquareOptions']>['type'];
+    cornersDotType: NonNullable<Options['cornersDotOptions']>['type'];
     gradient?: {
         type: 'linear' | 'radial';
         rotation?: number;

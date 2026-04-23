@@ -54,7 +54,7 @@ export const QRCodeDisplay: React.FC<QRCodeDisplayProps> = ({ data, logo }) => {
 
     return (
         <div className="flex flex-col gap-6 w-full max-w-md mx-auto">
-            <Card className="flex flex-col items-center justify-center gap-8 w-full p-10 bg-white/5 border-white/5">
+            <Card className="flex flex-col items-center justify-center gap-8 w-full p-10">
                 <div className="relative">
                     {/* Subtle glow behind QR */}
                     <div className="absolute opacity-20"

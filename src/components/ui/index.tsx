@@ -12,7 +12,7 @@ export const Card = forwardRef<HTMLDivElement, CardProps>(
         return (
             <div
                 ref={ref}
-                className={`glass-panel p-6 animate-fade-in ${className}`}
+                className={`glass3d-card p-6 animate-fade-in ${className}`}
                 {...props}
             >
                 {children}

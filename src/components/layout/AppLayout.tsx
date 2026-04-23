@@ -8,6 +8,7 @@ export const AppLayout: React.FC<{ children: React.ReactNode }> = ({ children })
                 <div className="fluid-bg">
                     <div className="fluid-shape shape-1" />
                     <div className="fluid-shape shape-2" />
+                    <div className="fluid-shape shape-3" style={{ bottom: '20%', left: '30%', width: '40vw', height: '40vw', background: 'rgba(139, 92, 246, 0.2)', animation: 'float 20s infinite ease-in-out' }} />
                 </div>
 
                 {/* Header */}

@@ -9,7 +9,7 @@ interface NavigationProps {
 
 export const Navigation: React.FC<NavigationProps> = ({ activeTab, onTabChange }) => {
     return (
-        <div className="flex nav-container p-1.5 mb-8 relative border border-white/5 backdrop-blur-xl w-fit mx-auto min-w-[300px]">
+        <div className="flex glass3d-card p-1.5 mb-8 relative w-fit mx-auto min-w-[300px]" style={{ borderRadius: '999px' }}>
             <div
                 className={clsx(
                     "absolute nav-pill transition-all duration-500 ease-[cubic-bezier(0.19,1,0.22,1)]",
